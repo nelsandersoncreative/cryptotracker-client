@@ -1,0 +1,64 @@
+@import 'https://code.highcharts.com/css/highcharts.css';
+
+.highcharts-color-0 {
+  fill:  var(--success-color);
+  stroke: var(--success-color);
+}
+
+.highcharts-background {
+	fill: #061a44;
+	stroke: #333333;
+	stroke-width: 3px;
+}
+
+.highcharts-tooltip-box {
+	fill: black;
+	fill-opacity: 0.6;
+	stroke-width: 0;
+}
+
+.highcharts-tooltip text {
+	fill: white;
+	text-shadow: 0 0 3px black;
+}
+
+.price-chart {
+  width: 100%;
+}
+
+.chart-select {
+  border: 1px solid #333333;
+  padding-right: 20px;
+  background-color: #061a44;
+  margin-bottom: 15px;
+}
+
+.chart-select:hover {
+    box-shadow: 0px 0px 4px 2px #5fff17;
+}
+
+[data-highcharts-chart="0"],
+.highcharts-container,
+.highcharts-root {
+  width: 100% !important;
+}
+
+
+select {
+margin-top: 0;
+padding: 0;
+background-color: black;
+font-size: 100px;
+}
+
+.spinner {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-spinner {
+  width: 50px;
+}

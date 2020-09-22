@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+:root {
+  --primary-color: black;
+  --background-color: black;
+  --success-color: #00FF41;
+  --error-color: red;
+  --font-family: 'Oxygen Mono', monospace;
+}
+
+body {
+  background-color: black;
+  color: var(--success-color);
+  font-family: 'Oxygen Mono', monospace;
+}
