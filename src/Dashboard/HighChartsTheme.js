@@ -1,4 +1,4 @@
-import { lightTheme } from '../Shared/Styles';
+// import { lightTheme } from '../Shared/Styles';
 
 export default {
   colors: ['#61d936', '#552ccb', '#1163c9', '#04A1EE', '#08C6E0',

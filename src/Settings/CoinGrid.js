@@ -15,10 +15,6 @@ function getLowerSectionCoins(coinList, filteredCoins) {
 }
 
 function getCoinsToDisplay(coinList, topSection, favorites, filterCoins) {
-  // console.log(coinList, 'coinList in getCoinsToDisplay'); //ALL COINS!
-  // console.log(topSection, 'topSection in getCoinsToDisplay'); //true
-  // console.log(favorites, 'favorites in getCoinsToDisplay'); //coinKey of favorite coins in favorite list
-  // console.log(filterCoins, 'filterCoins in getCoinsToDisplay'); //undefined
   return topSection ? favorites : getLowerSectionCoins(coinList, filterCoins);
 }
 

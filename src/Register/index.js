@@ -120,42 +120,43 @@ class Register extends Component {
 
   render() {
   
-  const {validationError, user_name_valid, emailValid, passwordValid, formValid} = this.state
+  const { validationError, user_name, user_name_valid, email, emailValid, password, passwordValid, error, formValid} = this.state
+  const { setPage } = this.context;
 
   return (
     <Page name="register">
         <div className="modal-container" id="modal">
             <div className="modal">
 
-              <button className="close-btn" id="close" onClick={() => this.context.setPage('settings')}>
+              <button className="close-btn" id="close" onClick={() => setPage('settings')}>
                 <i className="fa fa-times"></i>
               </button>
 
               <div className="modal-header">
                 <h3>Register</h3>
-                <p>Already have an account? <Link to='/' className="nav-link" onClick={() => this.context.setPage('login')}>Log in</Link></p>
+                <p>Already have an account? <Link to='/' className="nav-link" onClick={() => setPage('login')}>Log in</Link></p>
               </div>
 
               <div className="modal-content">
                   <p>Create an account to start your wallet of coins!</p>
                   <form className='js-registration-form' action='#' onSubmit={this.handleSubmit}>
-                  <div className='error-msg'>{this.state.error ? <img id="error-img" src={ErrorImage} alt="error" /> : null}{this.state.error}</div>
+                  <div className='error-msg'>{error ? <img id="error-img" src={ErrorImage} alt="error" /> : null}{error}</div>
 
                   <div className='form-group'>
                     <label htmlFor='user_name'>Username</label>
-                    <input type='text' className="input-value" id='user_name' name='user_name' placeholder='Enter username here.' value={this.state.user_name} onChange={this.handleChange} autoComplete="off" onBlur={this.validateUserName} autoComplete="on"/>
+                    <input type='text' className="input-value" id='user_name' name='user_name' placeholder='Enter username here.' value={user_name} onChange={this.handleChange} autoComplete="off" onBlur={this.validateUserName} />
                     <Validator isValid={user_name_valid} msg={validationError.user_name} />
                   </div>
 
                   <div className='form-group'>
                     <label htmlFor='email'>Email</label>
-                    <input type='text' id='email' name='email' value={this.state.email} placeholder='Enter email here.' onChange={this.handleChange} onBlur={this.validateUserEmail}  autoComplete="off"/>
+                    <input type='text' id='email' name='email' value={email} placeholder='Enter email here.' onChange={this.handleChange} onBlur={this.validateUserEmail}  autoComplete="off"/>
                     <Validator isValid={emailValid} msg={validationError.email} />
                   </div>
 
                   <div className='form-group'>
                     <label htmlFor='password'>Password</label>
-                    <input type='password' id='password' name='password' value={this.state.password} placeholder='Enter password here.' onChange={this.handleChange} autoComplete="off"/>
+                    <input type='password' id='password' name='password' value={password} placeholder='Enter password here.' onChange={this.handleChange} autoComplete="off"/>
                     <Validator isValid={passwordValid} msg={validationError.password} />
                   </div>
 

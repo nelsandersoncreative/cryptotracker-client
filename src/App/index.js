@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AppLayout from './AppLayout';
 import AppBar from './AppBar';
-import { AppProvider, AppContext } from './AppProvider';
+import { AppProvider } from './AppProvider';
 import Settings from '../Settings';
 import Dashboard from '../Dashboard';
 import Login from '../Login';

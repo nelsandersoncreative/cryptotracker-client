@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { get } from 'lodash';
 import { Tile } from '../Shared/Tile';
 import { AppContext } from '../App/AppProvider';
 import CoinImage from '../Shared/CoinImage';

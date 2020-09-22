@@ -128,6 +128,7 @@ export class AppProvider extends Component {
       })
     })
     const result = await res.json();
+    return result;
   } catch (err) {
     console.error({ msg: err });
   }
