@@ -44,11 +44,11 @@ If you'd like to learn more about Crypto Tracker, discover cryptocurrency coins 
 
 1. Get api key for the Cryptocompare API: https://min-api.cryptocompare.com/
 
-2. Create a `.env.local` file in the project root and put the following in each file:
+2. Create a `.env.local` file in the project root and put the following in each file:  
 
-NODE=development__
-REACT_APP_CRYPTOCOMPARE_API_KEY=`<CRYPTOCOMPARE API KEY GOES HERE>`__
-REACT_APP_API_KEY=`<SERVER API KEY GOES HERE - IF APPLICABLE>`__
+NODE=development  
+REACT_APP_CRYPTOCOMPARE_API_KEY=`<CRYPTOCOMPARE API KEY GOES HERE>`  
+REACT_APP_API_KEY=`<SERVER API KEY GOES HERE - IF APPLICABLE>`  
 
 
 3. Run `npm install` to load dependencies
@@ -59,9 +59,9 @@ This is only the front end client, so develop locally you'll need the backend se
 
 To get the backend up and running see [https://github.com/nelsandersoncreative/cryptotracker-server](https://github.com/nelsandersoncreative/cryptotracker-server)
 
-Deployments are handled through Vercel and can be run via `npm run deploy`
+Deployments are handled through Vercel and can be run via `npm run deploy`  
 
-__
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
