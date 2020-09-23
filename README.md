@@ -59,7 +59,7 @@ This is only the front end client, so develop locally you'll need the backend se
 
 To get the backend up and running see [https://github.com/nelsandersoncreative/cryptotracker-server](https://github.com/nelsandersoncreative/cryptotracker-server)
 
-Deployments are handled through Vercel and can be run via `npm run deploy`  
+Deployments are handled through Vercel  
 
 
 
