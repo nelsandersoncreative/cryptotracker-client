@@ -45,9 +45,11 @@ If you'd like to learn more about Crypto Tracker, discover cryptocurrency coins 
 1. Get api key for the Cryptocompare API: https://min-api.cryptocompare.com/
 
 2. Create a `.env.local` file in the project root and put the following in each file:
+
 NODE=development
 REACT_APP_CRYPTOCOMPARE_API_KEY=`<CRYPTOCOMPARE API KEY GOES HERE>`
 REACT_APP_API_KEY=`<SERVER API KEY GOES HERE - IF APPLICABLE>`
+
 
 3. Run `npm install` to load dependencies
 
