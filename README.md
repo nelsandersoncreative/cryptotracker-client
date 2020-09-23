@@ -1,3 +1,65 @@
+# CryptoTracker Client
+Create a wallet of cryptocurrency coins you want to follow. See chronological visualizations of coin prices measured in days, weeks or months dating as far back as 2010 all the way to the present.
+
+This repo is the front-end client, built in React.  You can see the app live at [https://cryptotracker-omega.vercel.app/](https://cryptotracker-omega.vercel.app/)
+
+The app is meant for desktop use, but will still scale for tablet and mobile viewing.
+
+To check out the app, you can use the following dummy account to see the onboarding experience:
+
+#### Demo Account Details
+
+* email: sampleuser@sampleuser.com
+* password: foobar
+
+## Introduction
+
+If you'd like to learn more about Crypto Tracker, discover cryptocurrency coins you haven't heard about or just want to see general cryptocurrency prices, you have come to the right place. With this app you will be able to explore cryptocurrency coins, save the ones you like in a wallet and refer to them whenever you'd like.
+
+## Screenshots
+
+| Home       | Favorites   | Search     | Login       | Dashboard   | New Dash   | Results     |
+|------------|-------------|------------|-------------|-------------|------------|-------------|
+| <img src="/assets/cryptotracker-home-public.png" width="250"> | <img src="/assets/cryptotracker-home-favorites-public.png" width="250"> | <img src="/assets/cryptotracker-home-search-public.png" width="250"> | <img src="/assets/cryptotracker-login.png" width="250"> | <img src="/assets/cryptotracker-dashboard.png" width="250"> | <img src="/assets/cryptotracker-dashfiller.png" width="250"> | <img src="/assets/cryptotracker-search-query-public.png" width="250"> |
+
+## Technology
+
+#### Front End
+
+* React
+  * Create React App
+  * React Router
+* HTML5
+* CSS3 (scratch - no frameworks)
+
+#### Testing
+
+* Jest (screen captures & smoke tests)
+
+#### Production
+
+* Deployed via Vercel
+
+## Getting Started
+
+1. Get api key for the Cryptocompare API: https://min-api.cryptocompare.com/
+
+2. Create a `.env.local` file in the project root and put the following in each file:
+NODE=development
+REACT_APP_CRYPTOCOMPARE_API_KEY=`<CRYPTOCOMPARE API KEY GOES HERE>`
+REACT_APP_API_KEY=`<SERVER API KEY GOES HERE - IF APPLICABLE>`
+
+3. Run `npm install` to load dependencies
+
+4. Run `npm test` to ensure a stable build
+
+This is only the front end client, so develop locally you'll need the backend server as well.
+
+To get the backend up and running see [https://github.com/nelsandersoncreative/cryptotracker-server](https://github.com/nelsandersoncreative/cryptotracker-server)
+
+Deployments are handled through Vercel and can be run via `npm run deploy`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

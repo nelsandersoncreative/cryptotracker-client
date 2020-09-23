@@ -2,8 +2,8 @@ let apiPath;
 let tokenKey;
 
 if (process.env.NODE_ENV === 'production') {
-  apiPath = 'https://cryptotracker-api.herokuapp.com/api'
-  tokenKey = 'cryptotracker-prod-auth-token'
+  apiPath = 'https://cryptotracker-server.herokuapp.com/api'
+  tokenKey = process.env.REACT_APP_API_KEY
 } else {
   apiPath = 'http://localhost:9000/api'
   tokenKey = 'cryptotracker-auth-token'
