@@ -15,7 +15,7 @@ function clickCoinHandler(topSection, coinKey, addCoin, removeCoin) {
 export default function({coinKey, topSection}) {
   return (
     <AppContext.Consumer>
-      {({coinList, addCoin, removeCoin, isInFavorites }) => {
+      {({ coinList, addCoin, removeCoin, isInFavorites }) => {
         let coin = coinList[coinKey];
 
         let TileClass = SelectableTile;

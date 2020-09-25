@@ -33,3 +33,8 @@ a.nav-link:hover {
   height: auto;
 }
 
+@media(max-width: 730px) {
+  a.nav-link {
+    margin-top: 20px;
+  }
+}

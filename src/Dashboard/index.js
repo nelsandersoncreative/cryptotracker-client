@@ -14,10 +14,16 @@ const ChartGrid = styled.div`
   width: 100%;
   grid-gap: 15px;
   grid-template-columns: 2fr 7fr;
+  @media(max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export default function() {
-  const { coins } = useContext(AppContext);
+  const { coins, prices } = useContext(AppContext);
   if (coins.length === 0) {
     return (
     <Page name="dashboard">
@@ -25,6 +31,7 @@ export default function() {
     </Page>
     )
   } else {
+    console.log(prices);
   return (
   <Page name="dashboard">    
     <h2>Select a coin to see price data:</h2>

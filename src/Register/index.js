@@ -37,10 +37,8 @@ class Register extends Component {
       const savedUser = await AuthApiService.login(email, password)
       this.context.login(savedUser.authToken);
       this.context.setCurrentUser(savedUser.user);
-  
-
       setLoading(false)
-      // this will load /coins which will then display a message if there are no coins or a coin list...
+
     } catch(err) {
       this.setState({error: err.message}, setLoading(false))
     }
@@ -74,11 +72,7 @@ class Register extends Component {
     } else if (user_name.length < 3 || user_name.length > 30) {
       user_name_valid = false
       validationError.user_name = 'Sorry, your username must be between 3 and 30 characters.'
-    } 
-    // else if (user_name.trim().indexOf(' ') === -1) {
-    //   user_name_valid = false
-    //   validationError.user_name = 'must contain a space separating first and last'
-    // }
+    }
 
     this.setState({user_name_valid, validationError}, this.validateForm)
   }

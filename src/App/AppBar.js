@@ -23,7 +23,9 @@ const Bar = styled.div`
   border: 1px solid var(--success-color);
   padding: 20px
   margin-bottom: 40px;
-  ${'' /* grid-template-columns: 300px auto 540px; */}
+  @media(max-width: 730px) {
+    justify-content: center;
+  }
 `
 
 const ControlButtonElem = styled.div`
@@ -31,6 +33,9 @@ const ControlButtonElem = styled.div`
   box-shadow: 0px 0px 4px 2px black;
     margin: 5px;
     padding: 5px;
+    @media(max-width: 730px) {
+    margin-top: 20px;
+    }
     &:hover {
       box-shadow: 0px 0px 4px 2px #5fff17;
     }

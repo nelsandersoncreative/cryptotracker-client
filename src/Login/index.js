@@ -42,48 +42,6 @@ class Login extends Component {
     }, name === 'password' ? this.validateUserPassword : null)
   }
 
-  // validateForm = () => {
-  //   const {emailValid, passwordValid} = this.state
-  //   this.setState({
-  //     formValid: emailValid && passwordValid
-  //   })
-  // }
-
-  // validateUserEmail = () => {
-  //   let emailValid = true
-  //   const validationError = {...this.state.validationError}
-  //   const {email} = this.state
-
-  //   if (email.startsWith(' ') || email.endsWith(' ')) {
-  //     emailValid = false
-  //     validationError.email = 'cannot begin or end with spaces'
-  //   } else if (!email.length) {
-  //     emailValid = false
-  //     validationError.email = 'is required'
-  //   } else if (!/\S+@\S+/.test(email)) {
-  //     emailValid = false
-  //     validationError.email = 'invalid format'
-  //   }
-
-  //   this.setState({emailValid, validationError}, this.validateForm)
-  // }
-
-  // validateUserPassword = () => {
-  //   let passwordValid = true
-  //   const validationError = {...this.state.validationError}
-  //   const {password} = this.state
-
-  //   if (password.startsWith(' ') || password.endsWith(' ')) {
-  //     passwordValid = false
-  //     validationError.password = 'cannot begin or end with spaces'
-  //   } else if (password.length < 6 || password.length > 72) {
-  //     passwordValid = false
-  //     validationError.password = 'must be between 6 and 72 characters'
-  //   }
-
-  //   this.setState({passwordValid, validationError}, this.validateForm)
-  // } 
-
   render() {
     const { setPage } = this.context
   return (

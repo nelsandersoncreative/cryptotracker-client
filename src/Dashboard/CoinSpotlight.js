@@ -7,6 +7,9 @@ import CoinImage from '../Shared/CoinImage';
 const SpotlightName = styled.h2`
   text-align: center;
   font-size: 40px;
+  @media(max-width: 750px) {
+    font-size: 20px;
+  }
 `
 
 export default function() {

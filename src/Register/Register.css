@@ -209,20 +209,6 @@ button.submit-btn {
   border-color: var(--error-color);
 }
 
-/* .form-group small {
-  color: var(--error-color);
-  text-align: center;
-  position: absolute;
-  font-size: 20px;
-  bottom: -10px;
-  left: 0;
-  visibility: hidden;
-}
-
-.form-group.error small {
-  visibility: visible;
-} */
-
 .form-controls {
   width: 100%;
 }
