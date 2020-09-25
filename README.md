@@ -1,4 +1,4 @@
-# CryptoTracker Client
+# CryptoTracker - Client
 Create a wallet of cryptocurrency coins you want to follow. See chronological visualizations of coin prices measured in days, weeks or months dating as far back as 2010 all the way to the present.
 
 This repo is the front-end client, built in React.  You can see the app live at [https://cryptotracker-omega.vercel.app/](https://cryptotracker-omega.vercel.app/)
@@ -133,4 +133,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
 # crypotracker
