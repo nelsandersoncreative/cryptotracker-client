@@ -23,7 +23,7 @@ const ChartGrid = styled.div`
 `
 
 export default function() {
-  const { coins, prices } = useContext(AppContext);
+  const { coins } = useContext(AppContext);
   if (coins.length === 0) {
     return (
     <Page name="dashboard">
