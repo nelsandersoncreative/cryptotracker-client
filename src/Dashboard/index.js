@@ -31,7 +31,6 @@ export default function() {
     </Page>
     )
   } else {
-    console.log(prices);
   return (
   <Page name="dashboard">    
     <h2>Select a coin to see price data:</h2>

@@ -4,7 +4,6 @@ import { AppProvider } from '../App/AppProvider';
 import Content from './Content';
 
 //coinList prices firstVisit
-
 describe('Content Component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');

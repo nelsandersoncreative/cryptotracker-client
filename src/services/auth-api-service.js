@@ -1,5 +1,4 @@
 import config from '../config';
-// import TokenService from './TokenService';
 
 const AuthApiService = {
   async login(user_email, user_password){
