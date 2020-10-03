@@ -5,6 +5,6 @@ import styled from 'styled-components';
 export default styled.div`
   padding: 40px;
   @media(max-width: 780px) {
-    padding: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
   }
 `

@@ -136,19 +136,19 @@ class Register extends Component {
                     <form className='js-registration-form' action='#' onSubmit={this.handleSubmit}>
                     <div className='error-msg'>{error ? <img id="error-img" src={ErrorImage} alt="error" /> : null}{error}</div>
 
-                    <div className='form-group'>
+                    <div className='form-group-register'>
                       <label htmlFor='user_name'>Username</label>
                       <input type='text' className="input-value" id='user_name' name='user_name' placeholder='Enter username here.' value={user_name} onChange={this.handleChange} autoComplete="off" onBlur={this.validateUserName} />
                       <Validator isValid={user_name_valid} msg={validationError.user_name} />
                     </div>
 
-                    <div className='form-group'>
+                    <div className='form-group-register'>
                       <label htmlFor='email'>Email</label>
                       <input type='text' id='email' name='email' value={email} placeholder='Enter email here.' onChange={this.handleChange} onBlur={this.validateUserEmail}  autoComplete="off"/>
                       <Validator isValid={emailValid} msg={validationError.email} />
                     </div>
 
-                    <div className='form-group'>
+                    <div className='form-group-register'>
                       <label htmlFor='password'>Password</label>
                       <input type='password' id='password' name='password' value={password} placeholder='Enter password here.' onChange={this.handleChange} autoComplete="off"/>
                       <Validator isValid={passwordValid} msg={validationError.password} />

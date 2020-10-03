@@ -255,8 +255,14 @@ button.submit-btn {
 }
 
 @media (max-width: 780px) {
+  .modal-container {
+    width: 300px;
+  }
+
   .modal {
-    width: 340px;
+    margin: 10px;
+    height: 100%;
+    width: 200px;
   }
 
   .header-acct {
@@ -264,11 +270,11 @@ button.submit-btn {
   }
 
   a.nav-link-form {
-    font-size: 14px;
+    font-size: 5px;
   }
 
   a.nav-link {
-    font-size: 17px;
+    font-size: 12px;
   }
 
 }
