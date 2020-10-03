@@ -1,0 +1,11 @@
+.spinner {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-spinner {
+  width: 50px;
+}
