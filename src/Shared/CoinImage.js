@@ -12,9 +12,10 @@ const CoinImage = styled.img`
 `
 
 export default function({coin, spotlight}) {
+  console.log(coin.Symbol);
   return <CoinImage
       spotlight={spotlight}
-      alt={coin.CoinSymbol}
+      alt={coin.Symbol}
       src={`http://cryptocompare.com/${coin.ImageUrl}`}
     />;
 }

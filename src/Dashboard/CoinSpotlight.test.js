@@ -22,8 +22,3 @@ describe('CoinSpotlight Component', () => {
 
   });
 });
-
-
-
-    
-    
