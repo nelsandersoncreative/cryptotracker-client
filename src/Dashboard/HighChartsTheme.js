@@ -1,5 +1,5 @@
 // import { lightTheme } from '../Shared/Styles';
-
+// Styling for HighCharts visualization chart used in PriceChart
 export default {
   colors: ['#61d936', '#552ccb', '#1163c9', '#04A1EE', '#08C6E0',
       '#146B9E', '#F376C1', '#1B2839'],

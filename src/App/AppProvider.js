@@ -10,11 +10,15 @@ import moment from 'moment';
 
 const cc = require('cryptocompare');
 
+
+// initialized instance of context
 export const AppContext = React.createContext();
 
+// variables for maximum amount of favorites and time units in visualizations
 const MAX_FAVORITES = 10;
 const TIME_UNITS = 10;
 
+// component class Context provider
 export class AppProvider extends Component {
   constructor(props) {
     super(props)
@@ -55,7 +59,6 @@ export class AppProvider extends Component {
   }
 
   // Client interaction with API
-
   async componentDidMount() {
     this.getCurrentUser()
   }
@@ -71,26 +74,31 @@ export class AppProvider extends Component {
     }
   }
 
+  // set loading
   setLoading = bool => {
     this.setState({isLoading: bool})
   }
 
+  // set current user in state
   setCurrentUser = userObject => {
     this.setState({ currentUser: userObject });
     this.setState({ currentUserId: userObject.id });
     this.setPage('settings');
   }
 
+  // log in user
   login = (token) => {
     TokenService.saveAuthToken(token)
     this.setState({hasAuth: true})
   }
 
+  // logout user
   logout = () => {
     TokenService.clearAuthToken()
     this.setState({hasAuth: false, firstVisit: true, coins: [], favorites: []})
   }
 
+  // get user coin list
   getUserCoins = async id => {
     //GET request for user coins
     const res = await fetch(`${config.API_ENDPOINT}/user-coins/${id}`, {
@@ -113,6 +121,7 @@ export class AppProvider extends Component {
     });
   }
 
+  // set user coin list
   setUserCoins = async () => {
     try {
     const res = await fetch(`${config.API_ENDPOINT}/user-coins/add-coins/`, {
@@ -136,42 +145,50 @@ export class AppProvider extends Component {
 
   // Client-Side App related Functions
 
+  // show register form
   showModalFunc = () => {
     this.setState({ showModal: true, showLogin: false });
   }
 
+  // hide register form
   hideModalFunc = () => {
     this.setState({ showModal: false });
   }
 
+  // show login form
   showLoginFunc = () => {
     this.setState({ showLogin: true, showModal: false });
   }
 
+  // hide login form
   hideLoginFunc = () => {
     this.setState({ showLogin: false });
   }
 
+  // when App loads ... get coins (fill up coinsList), prices and historical data
   componentDidMount = () => {
     this.fetchCoins();
     this.fetchPrices();
     this.fetchHistorical();
   }
 
+  // propagate coins from CryptoCompare in the coin list
   fetchCoins = async () => {
     let coinList = (await cc.coinList()).Data;
     this.setState({coinList});
   }
 
+  // get coin prices
   fetchPrices = async () => {
     if(this.state.firstVisit) return;
     let prices = await this.prices();
 
-    // We must filter the empty price objects (not in the lecture)
+    // Filter empty price objects
     prices = prices.filter(price => Object.keys(price).length);
     this.setState({prices});
   }
 
+  // fetch historical price data dating back to 2010
   fetchHistorical = async () => {
     if(this.state.firstVisit) return;
     let results = await this.historical();
@@ -187,12 +204,7 @@ export class AppProvider extends Component {
     this.setState({historical});
   }
 
-  // fetchPrices = async () => {
-  //   let prices = await this.prices();
-  //   console.log(prices);
-  //   this.setState({prices});
-  // }
-
+  // get prices for coins in favorites
   prices = async () => {
     let returnData = [];
     for(let i = 0; i < this.state.favorites.length; i++) {
@@ -206,6 +218,7 @@ export class AppProvider extends Component {
     return returnData;
   }
 
+  //get historical data for a given coin
   historical = () => {
     let promises = [];
     for (let units = TIME_UNITS; units > 0; units--) {
@@ -222,21 +235,26 @@ export class AppProvider extends Component {
     return Promise.all(promises);
   }
 
+  // add coin to a user's favorites as long as it's less than MAX-FAVORITES
   addCoin = key => {
     let favorites = [...this.state.favorites];
-    if(favorites.length < MAX_FAVORITES) {
+    if(favorites.length <= MAX_FAVORITES) {
       favorites.push(key);
       this.setState({favorites});
     }
   }
 
+  // remove coin from a user's favorites
   removeCoin = key => {
     let favorites = [...this.state.favorites];
     this.setState({favorites: _.pull(favorites, key)})
   }
 
+  // determine if a coin is in a user's favorites
   isInFavorites = key => _.includes(this.state.favorites, key);
 
+  // confirm user favorites -- filling up user dashboard with data from each of
+  // the coins in their favorites
   confirmFavorites = () => {
     if (!this.state.hasAuth) {
       this.setPage('register');
@@ -261,6 +279,7 @@ export class AppProvider extends Component {
     }
   }
 
+  // Set the current favorite to display a historical data visualization
   setCurrentFavorite = (sym) => {
     this.setState({
       currentFavorite: sym,
@@ -272,6 +291,7 @@ export class AppProvider extends Component {
     }))
   }
 
+  // load users coin list and saved settings
   savedSettings() {
     let cryptoTrackerData = JSON.parse(localStorage.getItem('cryptoTracker'));
     if (!this.hasAuth) {
@@ -281,11 +301,14 @@ export class AppProvider extends Component {
     return { favorites, currentFavorite };
   }  
 
+  // set the page to be displayed
   setPage = page => {page !== 'dashboard' ? this.setState({page}) : this.confirmFavorites()}
 
-
+  // set filtered coins to state
   setFilteredCoins = (filteredCoins) => this.setState({filteredCoins});
 
+  // handles changing the time measurement (days, weeks or months)
+  // for visualizations in the user dashboard
   changeChartSelect = (value) => {
     this.setState({timeInterval: value, historical: null}, this.fetchHistorical);
   }

@@ -5,6 +5,9 @@ import { fontSize3, fontSizeBig, greenBoxShadow } from '../Shared/Styles';
 import { CoinHeaderGridStyled } from '../Settings/CoinHeaderGrid';
 import { AppContext } from '../App/AppProvider';
 
+// Component for coin tiles in user dashboard
+
+//css styling for justification of text on different coin tiles
 const JustifyRight = styled.div`
   text-align: right;
 `
@@ -24,10 +27,12 @@ const ChangePct = styled.div`
   `}
 `
 
+// format price data numbers
 const numberFormat = number => {
   return +(number + '').slice(0, 7);
 }
 
+// CSS styles for price tiles
 const PriceTileStyled = styled(SelectableTile)`
   ${props => props.compact && css`
     display: grid;
@@ -43,6 +48,7 @@ const PriceTileStyled = styled(SelectableTile)`
   `}
 `
 
+// Handle percentage change in coin prices
 function ChangePercent({data}) {
   return (
     <JustifyRight> 
@@ -53,6 +59,7 @@ function ChangePercent({data}) {
   );
 }
 
+// Top row of price tiles in upper section of user dashboard when 2 rows exist
 function PriceTile({ sym, data, currentFavorite, setCurrentFavorite }) {
   return (
     <PriceTileStyled onClick={setCurrentFavorite} currentFavorite={currentFavorite}>
@@ -67,7 +74,7 @@ function PriceTile({ sym, data, currentFavorite, setCurrentFavorite }) {
   )
 }
 
-
+// Bottom row of Compact price tiles in upper section of user dashboard when 2 rows exist
 function PriceTileCompact({ sym, data, currentFavorite, setCurrentFavorite }) {
   return (
     <PriceTileStyled compact onClick={setCurrentFavorite} currentFavorite={currentFavorite}>

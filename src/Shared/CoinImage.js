@@ -1,6 +1,9 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 
+//Coin image component whenever a coin logo image is displayed on a tile in the app
+
+// CSS styling for Coin Image
 const CoinImage = styled.img`
  height: 80px; 
  padding: 20px;
@@ -12,7 +15,6 @@ const CoinImage = styled.img`
 `
 
 export default function({coin, spotlight}) {
-  console.log(coin.Symbol);
   return <CoinImage
       spotlight={spotlight}
       alt={coin.Symbol}

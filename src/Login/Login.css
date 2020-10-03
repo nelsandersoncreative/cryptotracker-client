@@ -253,3 +253,18 @@ button.submit-btn {
     opacity: 1;
   }
 }
+
+@media (max-width: 780px) {
+  .modal {
+    width: 340px;
+  }
+
+  .header-acct {
+    font-size: 12px;
+  }
+
+  a.nav-link {
+    font-size: 12px;
+  }
+
+}

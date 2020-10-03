@@ -8,6 +8,7 @@ import Page from '../Shared/Page';
 import './Register.css';
 import ErrorImage from './error.svg';
 
+// Register form component
 class Register extends Component {
   static contextType = AppContext;
   state = {
@@ -20,6 +21,7 @@ class Register extends Component {
     validationError: {}
   }
 
+  // handle user registration submission
   handleSubmit = async e => {
     e.preventDefault();
     this.setState({error: null})
@@ -48,12 +50,14 @@ class Register extends Component {
     this.setState({error: null})
   }
 
+  // handle changes to inputs on registration form
   handleChange = ({target: {name, value}}) => {
     this.setState({
       [name]: value
     }, name === 'password' ? this.validateUserPassword : null)
   }
 
+  // Form Validation
   validateForm = () => {
     const {user_name_valid, emailValid, passwordValid} = this.state
     this.setState({
@@ -113,55 +117,54 @@ class Register extends Component {
   } 
 
   render() {
-  
-  const { validationError, user_name, user_name_valid, email, emailValid, password, passwordValid, error, formValid} = this.state
-  const { setPage } = this.context;
+    const { validationError, user_name, user_name_valid, email, emailValid, password, passwordValid, error, formValid} = this.state
+    const { setPage } = this.context;
 
-  return (
-    <Page name="register">
-        <div className="modal-container" id="modal">
-            <div className="modal">
+    return (
+      <Page name="register">
+          <div className="modal-container" id="modal">
+              <div className="modal">
 
-              <button className="close-btn" id="close" onClick={() => setPage('settings')}>
-                <i className="fa fa-times"></i>
-              </button>
+                <button className="close-btn" id="close" onClick={() => setPage('settings')}>
+                  <i className="fa fa-times"></i>
+                </button>
 
-              <div className="modal-header">
-                <h3>Register</h3>
-                <p>Already have an account? <Link to='/' className="nav-link" onClick={() => setPage('login')}>Log in</Link></p>
-              </div>
+                <div className="modal-header">
+                  <h3>Register</h3>
+                  <p className="register-head">Already have an account? <Link to='/' className="nav-link" onClick={() => setPage('login')}>Log in</Link></p>
+                </div>
 
-              <div className="modal-content">
-                  <p>Create an account to start your wallet of coins!</p>
-                  <form className='js-registration-form' action='#' onSubmit={this.handleSubmit}>
-                  <div className='error-msg'>{error ? <img id="error-img" src={ErrorImage} alt="error" /> : null}{error}</div>
+                <div className="modal-content">
+                    <p>Create an account to start your wallet of coins!</p>
+                    <form className='js-registration-form' action='#' onSubmit={this.handleSubmit}>
+                    <div className='error-msg'>{error ? <img id="error-img" src={ErrorImage} alt="error" /> : null}{error}</div>
 
-                  <div className='form-group'>
-                    <label htmlFor='user_name'>Username</label>
-                    <input type='text' className="input-value" id='user_name' name='user_name' placeholder='Enter username here.' value={user_name} onChange={this.handleChange} autoComplete="off" onBlur={this.validateUserName} />
-                    <Validator isValid={user_name_valid} msg={validationError.user_name} />
-                  </div>
+                    <div className='form-group'>
+                      <label htmlFor='user_name'>Username</label>
+                      <input type='text' className="input-value" id='user_name' name='user_name' placeholder='Enter username here.' value={user_name} onChange={this.handleChange} autoComplete="off" onBlur={this.validateUserName} />
+                      <Validator isValid={user_name_valid} msg={validationError.user_name} />
+                    </div>
 
-                  <div className='form-group'>
-                    <label htmlFor='email'>Email</label>
-                    <input type='text' id='email' name='email' value={email} placeholder='Enter email here.' onChange={this.handleChange} onBlur={this.validateUserEmail}  autoComplete="off"/>
-                    <Validator isValid={emailValid} msg={validationError.email} />
-                  </div>
+                    <div className='form-group'>
+                      <label htmlFor='email'>Email</label>
+                      <input type='text' id='email' name='email' value={email} placeholder='Enter email here.' onChange={this.handleChange} onBlur={this.validateUserEmail}  autoComplete="off"/>
+                      <Validator isValid={emailValid} msg={validationError.email} />
+                    </div>
 
-                  <div className='form-group'>
-                    <label htmlFor='password'>Password</label>
-                    <input type='password' id='password' name='password' value={password} placeholder='Enter password here.' onChange={this.handleChange} autoComplete="off"/>
-                    <Validator isValid={passwordValid} msg={validationError.password} />
-                  </div>
+                    <div className='form-group'>
+                      <label htmlFor='password'>Password</label>
+                      <input type='password' id='password' name='password' value={password} placeholder='Enter password here.' onChange={this.handleChange} autoComplete="off"/>
+                      <Validator isValid={passwordValid} msg={validationError.password} />
+                    </div>
 
-                  <div className='form-controls'>
-                    <button disabled={!formValid} type='submit' className='button full outline'>Create Account</button>
-                  </div>
-                </form>
+                    <div className='form-controls'>
+                      <button disabled={!formValid} type='submit' className='button full outline'>Create Account</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-      </Page>
+        </Page>
     )
   }
 };

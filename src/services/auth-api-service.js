@@ -1,5 +1,6 @@
 import config from '../config';
 
+// Auth related services for user login and account creation
 const AuthApiService = {
   async login(user_email, user_password){
     const loginData = {user_email, user_password};

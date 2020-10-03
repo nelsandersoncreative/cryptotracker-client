@@ -5,6 +5,7 @@ import { AppContext } from './AppProvider';
 import LogoImage from './logo.png';
 import './AppBar.css';
 
+// Navbar header component (AppBar)
 
 //styles using 'styled-components'
 const Logo = styled.div`
@@ -51,6 +52,7 @@ const ControlButtonElem = styled.div`
 
 `
 
+// component for nav buttons in Header (AppBar)
 function ControlButton({name, active}) {
   return (
     <AppContext.Consumer>
@@ -66,6 +68,7 @@ function ControlButton({name, active}) {
   )
 }
 
+//Change nav button links to have only first letter uppercase
 function toProperCase(lower) {
   return lower.charAt(0).toUpperCase() + lower.substr(1);
 }

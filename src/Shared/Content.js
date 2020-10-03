@@ -4,6 +4,8 @@ import './Content.css';
 
 var Spinner = require('react-spinkit');
 
+// Return the content for a given page
+// if data is loading, show spinner
 export default function(props) {
   return <AppContext.Consumer>
     {({coinList, prices, firstVisit}) => {

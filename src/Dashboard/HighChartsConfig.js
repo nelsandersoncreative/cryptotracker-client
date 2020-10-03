@@ -1,3 +1,4 @@
+// Config for HighCharts data visualization used in PriceChart
 export default function(historical) {
 
   return {

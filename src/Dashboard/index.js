@@ -8,6 +8,11 @@ import PriceGrid from './PriceGrid';
 import CoinSpotlight from './CoinSpotlight';
 import PriceChart from './PriceChart';
 
+// User Dashboard Component (when clicking on 'Dashboard')
+
+// CSS styling for ChartGrid on User Dashboard
+// left column: CoinSpotlight
+// right column: PriceChart
 const ChartGrid = styled.div`
   display: grid;
   margin-top: 20px;

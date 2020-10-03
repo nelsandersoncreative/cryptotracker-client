@@ -4,6 +4,9 @@ import { AppContext } from '../App/AppProvider';
 import CoinHeaderGrid from './CoinHeaderGrid';
 import CoinImage from '../Shared/CoinImage';
 
+// Coin Tile Component found in both the Favorites list and the search list (CoinGrid)
+
+// function handling adding/removing coins from favorites list
 function clickCoinHandler(topSection, coinKey, addCoin, removeCoin) {
   return topSection ? () => {
     removeCoin(coinKey)

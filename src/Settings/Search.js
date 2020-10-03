@@ -5,16 +5,26 @@ import { AppContext } from '../App/AppProvider';
 import _ from 'lodash';
 import fuzzy from 'fuzzy';
 
+// Search Bar Component for Searching Coins Using Cryptocompare found in Settings Component
+
+// CSS Styling for Search results grid
 const SearchGrid = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding-top: 75px;
 `
 
+// CSS Styling for Search Label
 const SearchLabel = styled.div`
   width: 270px;
+  @media(max-width: 780px) {
+    text-align: center;
+  }
 `
 
+// CSS Styling for Search Input
 const SearchInput = styled.input`
   ${backgroundColor2}
   ${fontSize2}
@@ -26,8 +36,13 @@ const SearchInput = styled.input`
   font-size: 35px;
   color: var(--success-color);
   place-self: center left;
+  @media(max-width: 780px) {
+    place-self: center;
+    width: 90%;
+  }
 `
-
+//creates an array of elements split into groups the length of size
+// takes in the search term, the list of coins from API and a function to set filtered coins (setFilteredCoins found in context - AppProvider
 const handleFilter = _.debounce((inputValue, coinList, setFilterCoins) => {
 
   // Get all the coin symbols
@@ -47,6 +62,7 @@ const handleFilter = _.debounce((inputValue, coinList, setFilterCoins) => {
     setFilterCoins(filteredCoins);
 }, 500);
 
+// handles the search of the coinList obtained from the CryptoCompare API by filtering out coins relating to the search
 function filterCoins(e, setFilteredCoins, coinList) {
   let inputValue = e.target.value;
   if (!inputValue) {
@@ -56,6 +72,7 @@ function filterCoins(e, setFilteredCoins, coinList) {
   handleFilter(inputValue, coinList, setFilteredCoins);
 }
 
+// Search Bar Component for Searching Coins Using Cryptocompare found in Settings Component
 export default function() {
   return (
     <AppContext.Consumer>

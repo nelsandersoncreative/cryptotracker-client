@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Component to render when user has not yet added coins to their favorites
+// and/or confirmed them.
 const DashboardFill = () => {
   return (
     <div>

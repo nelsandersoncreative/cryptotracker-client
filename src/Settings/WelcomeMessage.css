@@ -7,16 +7,16 @@
   grid-template-columns: auto 350px auto;
 }
 
-.placeholder-grid {
-  display: grid;
-  grid-template-columns: auto 500px auto;
-}
-
 .favorite-coins-label {
   font-size: 34px;
   text-align: center;
   border: 1px solid var(--success-color);
   padding: 10px;
+}
+
+.placeholder-grid {
+  display: grid;
+  grid-template-columns: auto 500px auto;
 }
 
 .favorites-placeholder {
@@ -26,4 +26,40 @@
   font-size: 20px;
   color: black;
   background: var(--success-color);
+}
+
+@media (max-width: 780px) {
+  h1.welcome-head {
+    text-align: center;
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  h3.welcome-desc {
+    text-indent: 10px;
+    font-size: 12px;
+    margin-bottom: 50px;
+  }
+
+  p.welcome-steps {
+    font-size: 12px;
+  }
+
+  .label-grid {
+    grid-template-columns: auto 220px auto;
+  }
+
+  .favorite-coins-label {
+    font-size: 20px;
+  }
+
+  .placeholder-grid {
+    grid-template-columns: auto 250px auto;
+  }
+
+  .favorites-placeholder {
+    font-size: 15px;
+  }
+
 }

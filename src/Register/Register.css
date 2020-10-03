@@ -248,3 +248,21 @@ button.submit-btn {
     opacity: 1;
   }
 }
+
+@media (max-width: 780px) {
+  .modal {
+    width: 340px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .register-head {
+    font-size: 14px;
+  }
+
+  a.nav-link {
+    font-size: 14px;
+  }
+}

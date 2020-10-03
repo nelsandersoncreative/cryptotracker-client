@@ -8,8 +8,11 @@ import ChartSelect from './ChartSelect';
 import './PriceChart.css';
 
 var Spinner = require('react-spinkit');
+
+//pass in the HighChartsTheme object to set options for HighCharts visualization
 ReactHighcharts.Highcharts.setOptions(HighChartsTheme);
 
+// PriceChart component - displays HighCharts data visualizations
 export default function() {
   return (
     <AppContext.Consumer>

@@ -1,6 +1,7 @@
 import config from '../config';
 import TokenService from './TokenService';
 
+// Services for getting user coins from Database
 const UserApiService = {
   async getUserCoins(id) {
     const res = await fetch(`${config.API_ENDPOINT}/user-coins/${id}`, {

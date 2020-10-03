@@ -2,6 +2,7 @@ import React from 'react';
 import './Validator.css';
 import ErrorImage from '../Register/error.svg';
   
+// component for handling validation of forms
 export default function Validator(props) {
   if (!props.isValid) {
     return (

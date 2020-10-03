@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import { AppContext } from '../App/AppProvider';
 import CoinTile from './CoinTile';
 
+// Component for CoinGrids in the User Favorites list and search results, filtered based on the section this component is being used in
+
+//CSS Styling of Coin Grid
 export const CoinGridStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   grid-gap: 15px;
   margin-top: 40px;
 `
+
 function getLowerSectionCoins(coinList, filteredCoins) {
   return (filteredCoins && Object.keys(filteredCoins)) ||
     Object.keys(coinList).slice(0, 100);

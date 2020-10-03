@@ -6,6 +6,7 @@ import Page from '../Shared/Page';
 import CoinGrid from './CoinGrid';
 import Search from './Search';
 
+// Settings Component
 export default function() {
   const hasAuth = useContext(AppContext);
   
