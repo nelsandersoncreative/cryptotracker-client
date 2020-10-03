@@ -9,3 +9,14 @@
 .middle-spinner {
   width: 50px;
 }
+
+@media (max-width: 780px) {
+  .spinner {
+    flex-direction: column;
+    font-size: 25px;
+  }
+  .middle-spinner {
+    margin-top: 20px;
+    width: 40px;
+  }
+}
