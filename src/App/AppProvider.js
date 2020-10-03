@@ -24,11 +24,11 @@ export class AppProvider extends Component {
     super(props)
     this.state = {
       //api-related state
-      hasAuth: true,
-      currentUserId: 1,
-      currentUser: {user_name: 'a', user_email: 'a@a.com', user_id: 1},
+      hasAuth: false,
+      currentUserId: null,
+      currentUser: null,
       userCoinListStarted: null,
-      coins: ["BTC"],
+      coins: [],
       coin: {},
       setLoading: this.setLoading,
       login: this.login,

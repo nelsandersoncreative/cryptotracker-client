@@ -17,7 +17,6 @@ cc.setApiKey(process.env.REACT_APP_CRYPTOCOMPARE_API_KEY);
 
 // main app component
 function App(props) {
-
   return (
     <BrowserRouter>
       <AppLayout>
