@@ -37,7 +37,6 @@
   }
 
   h3.welcome-desc {
-    text-indent: 10px;
     font-size: 12px;
     margin-bottom: 50px;
   }
@@ -61,5 +60,4 @@
   .favorites-placeholder {
     font-size: 15px;
   }
-
 }

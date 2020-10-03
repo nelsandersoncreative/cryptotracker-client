@@ -30,7 +30,7 @@ class Register extends Component {
     const user_password = password;
     const newUser = {user_name, user_email, user_password}
     const {setLoading} = this.context;
- 
+
     try {
       setLoading(true)
       const inputNewUser = await AuthApiService.createUser(newUser)
@@ -77,7 +77,6 @@ class Register extends Component {
       user_name_valid = false
       validationError.user_name = 'Sorry, your username must be between 3 and 30 characters.'
     }
-
     this.setState({user_name_valid, validationError}, this.validateForm)
   }
 
@@ -96,7 +95,6 @@ class Register extends Component {
       emailValid = false
       validationError.email = 'Enter a valid email.'
     }
-
     this.setState({emailValid, validationError}, this.validateForm)
   }
 
@@ -112,7 +110,6 @@ class Register extends Component {
       passwordValid = false
       validationError.password = 'Sorry, your password must be between 6 and 30 characters.'
     }
-
     this.setState({passwordValid, validationError}, this.validateForm)
   } 
 
@@ -131,7 +128,7 @@ class Register extends Component {
 
                 <div className="modal-header">
                   <h3>Register</h3>
-                  <p className="register-head">Already have an account? <Link to='/' className="nav-link" onClick={() => setPage('login')}>Log in</Link></p>
+                  <p className="register-head">Already have an account? <Link to='/' className="nav-link-form" onClick={() => setPage('login')}>Log in</Link></p>
                 </div>
 
                 <div className="modal-content">

@@ -8,6 +8,8 @@ import PriceGrid from './PriceGrid';
 import CoinSpotlight from './CoinSpotlight';
 import PriceChart from './PriceChart';
 
+import '../App/App.css';
+
 // User Dashboard Component (when clicking on 'Dashboard')
 
 // CSS styling for ChartGrid on User Dashboard
@@ -19,11 +21,12 @@ const ChartGrid = styled.div`
   width: 100%;
   grid-gap: 15px;
   grid-template-columns: 2fr 7fr;
-  @media(max-width: 750px) {
+  @media(max-width: 850px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 `
 
@@ -38,7 +41,7 @@ export default function() {
   } else {
   return (
   <Page name="dashboard">    
-    <h2>Select a coin to see price data:</h2>
+    <h2 className="dashboard-head">Select a coin to see price data:</h2>
     <PriceGrid />
     <ChartGrid>
       <CoinSpotlight />

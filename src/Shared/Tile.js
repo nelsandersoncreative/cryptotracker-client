@@ -20,10 +20,18 @@ export const SelectableTile = styled(Tile)`
     cursor: pointer;
     ${greenBoxShadow}
   }
+  &:active {
+    cursor: pointer;
+    ${greenBoxShadow}
+  }
 `
 // CSS Styling for a tile if it is deletable
 export const DeletableTile = styled(SelectableTile)`
   &:hover {
+    cursor: pointer;
+    ${redBoxShadow}
+  }
+  &:active {
     cursor: pointer;
     ${redBoxShadow}
   }

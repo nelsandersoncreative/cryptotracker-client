@@ -12,6 +12,7 @@ const SpotlightName = styled.h2`
   font-size: 40px;
   @media(max-width: 750px) {
     font-size: 20px;
+    width: 100%;
   }
 `
 

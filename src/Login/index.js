@@ -60,7 +60,7 @@ class Login extends Component {
                   <h3>Login</h3>
                   <div className="header-acct">
                   <p>Don't have an account?</p>
-                  <Link to='/' className="nav-link" onClick={() => this.context.setPage('register')}>Register here</Link>
+                  <Link to='/' className="nav-link-form" onClick={() => this.context.setPage('register')}>Register here</Link>
                   </div>
                 </div>
 

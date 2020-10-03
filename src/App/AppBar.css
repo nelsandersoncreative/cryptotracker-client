@@ -23,7 +23,7 @@ a.nav-link:hover {
 .nav-controls {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -35,6 +35,10 @@ a.nav-link:hover {
 
 @media(max-width: 730px) {
   a.nav-link {
+    margin-top: 20px;
+  }
+
+  a.nav-link:active {
     margin-top: 20px;
   }
 }

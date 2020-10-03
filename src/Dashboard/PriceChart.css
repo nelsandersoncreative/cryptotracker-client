@@ -62,3 +62,10 @@ font-size: 100px;
 .middle-spinner {
   width: 50px;
 }
+
+@media (max-width: 780px) {
+  [data-highcharts-chart="0"], .highcharts-container, .highcharts-root {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

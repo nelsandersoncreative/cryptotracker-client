@@ -262,7 +262,11 @@ button.submit-btn {
     font-size: 14px;
   }
 
-  a.nav-link {
+  a.nav-link-form {
     font-size: 14px;
+  }
+
+  a.nav-link {
+    font-size: 17px;
   }
 }

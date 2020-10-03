@@ -11,8 +11,9 @@ const PriceGrid =  styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 15px;
   margin-top: 40px;
-  @media(max-width: 750px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media(max-width: 760px) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 15px;
   }
 `
 

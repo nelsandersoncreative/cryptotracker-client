@@ -38,7 +38,7 @@ const PriceTileStyled = styled(SelectableTile)`
     display: grid;
     ${fontSize3}
     grid-gap: 5px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr auto 1fr;
     justify-items: right;
   `}
 
@@ -52,10 +52,10 @@ const PriceTileStyled = styled(SelectableTile)`
 function ChangePercent({data}) {
   return (
     <JustifyRight> 
-    <ChangePct red={data.CHANGEPCT24HOUR < 0}>
-      {numberFormat(data.CHANGEPCT24HOUR)}%
-    </ChangePct>
-  </JustifyRight>
+      <ChangePct red={data.CHANGEPCT24HOUR < 0}>
+        {numberFormat(data.CHANGEPCT24HOUR)}%
+      </ChangePct>
+    </JustifyRight>
   );
 }
 
@@ -64,7 +64,7 @@ function PriceTile({ sym, data, currentFavorite, setCurrentFavorite }) {
   return (
     <PriceTileStyled onClick={setCurrentFavorite} currentFavorite={currentFavorite}>
       <CoinHeaderGridStyled>
-        <div> {sym} </div>
+        <JustifyLeft><div> {sym} </div></JustifyLeft>
         <ChangePercent data={data} />
       </CoinHeaderGridStyled>
       <TickerPrice>
