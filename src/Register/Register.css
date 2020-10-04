@@ -41,7 +41,7 @@ input:-webkit-autofill {
   animation-duration: var(--modal-duration);
 }
 
-.close-btn {
+.close-btn, .close-btn-register {
   background: black;
   border: 0;
   font-size: 30px;
@@ -51,7 +51,7 @@ input:-webkit-autofill {
   right: 4px;
 }
 
-.close-btn:active {
+.close-btn:active, .close-btn-register:active {
   outline: 0;
   background: var(--success-color);
   border: 0;
@@ -62,7 +62,7 @@ input:-webkit-autofill {
   right: 4px;
 }
 
-.close-btn:focus {
+.close-btn:focus, .close-btn-register:focus {
   outline: 0;
   background: var(--success-color);
   border: 0;
@@ -97,7 +97,8 @@ input:-webkit-autofill {
 .modal-header a {
   margin: 0;
   text-decoration: underline;
-  color: var(--success-color)
+  color: var(--success-color);
+  margin-left: 10px;
 }
 
 .modal-content {
@@ -109,10 +110,6 @@ input:-webkit-autofill {
   border: 2px solid var(--success-color);
   background: var(--primary-color);
   padding: 20px;
-}
-
-.modal-content p {
-font-size: 18px;
 }
 
 .js-registration-form {
@@ -252,56 +249,50 @@ button.submit-btn {
 
 @media (max-width: 780px) {
   .modal {
-    width: 340px;
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    width: 90%;
   }
 
-  h3 {
-    font-size: 25px;
+  .header-acct {
+    font-size: 10px;
   }
 
   .register-head {
-    font-size: 14px;
-    margin: 2px;
-  }
-
-  .modal-header {
-    padding: 5px;
-  }
-
-  a.nav-link-form {
-    margin-left: 10px;
     font-size: 12px;
   }
 
-  a.nav-link {
-    font-size: 17px;
-  }
-
-  .modal-content {
-    padding: 15px;
-  }
-
-  .modal-content > p {
-    display: none;
-  }
-
-  .button.full.outline {
+  .form-group-register {
     margin: 0;
+    padding: 0;
+  }
+
+  .form-group-register label {
+    font-size: 15px;
+    margin: 4px;
+  }
+
+  .form-group-register input {
+    font-size: 15px;
   }
 
   .form-group {
-    padding: 10px;
+    margin: 0;
+    padding: 0;
   }
 
-  .form-group-register {
-    padding: 2px;
+  .form-group label {
+    font-size: 15px;
+    margin: 4px;
   }
 
-  .form-group label, .form-group-register label {
-    font-size: 17px;
+  .form-group input {
+    font-size: 15px;
   }
-  
-  .form-group input, .form-group-register input {
-    width: 90%;
-  }
+
+
 }

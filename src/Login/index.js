@@ -65,7 +65,6 @@ class Login extends Component {
                 </div>
 
                 <div className="modal-content">
-                  <p>Login to see your curated list of coins!</p>
                     <form className='js-login-form' action='#' onSubmit={this.handleSubmit}>
                     <div className='form-group'>
                       <label htmlFor='email'>Email</label>

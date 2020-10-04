@@ -122,17 +122,16 @@ class Register extends Component {
           <div className="modal-container" id="modal">
               <div className="modal">
 
-                <button className="close-btn" id="close" onClick={() => setPage('settings')}>
+                <button className="close-btn-register" id="close" onClick={() => setPage('settings')}>
                   <i className="fa fa-times"></i>
                 </button>
 
                 <div className="modal-header">
                   <h3>Register</h3>
-                  <p className="register-head">Already have an account? <Link to='/' className="nav-link-form" onClick={() => setPage('login')}>Log in</Link></p>
+                  <p className="register-head">Already have an account?<Link to='/' className="nav-link-form" onClick={() => setPage('login')}>Log in</Link></p>
                 </div>
 
                 <div className="modal-content">
-                    <p>Create an account to start your wallet of coins!</p>
                     <form className='js-registration-form' action='#' onSubmit={this.handleSubmit}>
                     <div className='error-msg'>{error ? <img id="error-img" src={ErrorImage} alt="error" /> : null}{error}</div>
 
