@@ -68,6 +68,10 @@ font-size: 100px;
   .price-chart {
     margin-top: 10px;
   }
+
+  .chart-select select {
+    width: 100% !important;
+  }
   
   [data-highcharts-chart="0"], .highcharts-container, .highcharts-root {
     width: 100% !important;
