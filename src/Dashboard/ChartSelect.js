@@ -11,5 +11,5 @@ export default styled.select`
   border: none;
   margin: 0;
   width: 100%
-  height: 60px;
+  height: 100%;
 `;
