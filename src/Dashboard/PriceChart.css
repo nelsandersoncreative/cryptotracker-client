@@ -76,7 +76,7 @@ font-size: 100px;
     margin-top: 20px;
   }
 
-  .chart-select select {
+  .chart-select {
     padding-right: 0px;
   }
 }
