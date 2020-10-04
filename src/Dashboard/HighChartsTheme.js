@@ -1,6 +1,6 @@
 // import { lightTheme } from '../Shared/Styles';
 // Styling for HighCharts visualization chart used in PriceChart
-const innerWidthLeft = () => window.innerWidth <= 684 ? 70 : 120;
+const innerWidthLeft = () => window.innerWidth <= 684 ? 50 : 120;
 const innerWidthRight = () => window.innerWidth <= 684 ? 35 : 120;
 console.log(innerWidthLeft());
 console.log(innerWidthRight());

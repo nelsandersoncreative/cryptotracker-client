@@ -12,4 +12,8 @@ export default styled.select`
   margin: 0;
   width: 100%
   height: 60px;
+  @media (max-width: 780px) {
+    width: 90%;
+    margin-top: 5px;
+  }
 `;
