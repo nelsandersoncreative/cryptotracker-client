@@ -2,8 +2,7 @@
 // Styling for HighCharts visualization chart used in PriceChart
 const innerWidthLeft = () => window.innerWidth <= 684 ? 50 : 120;
 const innerWidthRight = () => window.innerWidth <= 684 ? 35 : 120;
-console.log(innerWidthLeft());
-console.log(innerWidthRight());
+
 export default {
   colors: ['#61d936', '#552ccb', '#1163c9', '#04A1EE', '#08C6E0',
       '#146B9E', '#F376C1', '#1B2839'],

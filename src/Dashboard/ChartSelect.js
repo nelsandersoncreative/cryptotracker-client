@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 // styles for days/weeks/months pulldown menu within PriceChart component (data visualization)
 export default styled.select`
+  -webkit-appearance:none;
   background-color: #061a44;
   outline: 0;
   font-size: 30px;
