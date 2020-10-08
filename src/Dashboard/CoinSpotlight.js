@@ -4,7 +4,6 @@ import { Tile } from '../Shared/Tile';
 import { AppContext } from '../App/AppProvider';
 import CoinImage from '../Shared/CoinImage';
 
-// The Left column of PriceGrid Component
 
 // CSS styling for SpotlightName
 const SpotlightName = styled.h2`
@@ -16,6 +15,7 @@ const SpotlightName = styled.h2`
   }
 `
 
+// The Left column of PriceGrid Component
 export default function() {
   return (
     <AppContext.Consumer>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Validator from '../Validator/Validator';
 import { AppContext } from '../App/AppProvider';
 import AuthApiService from '../services/auth-api-service';
-
 import Page from '../Shared/Page';
 import './Register.css';
 import ErrorImage from './error.svg';

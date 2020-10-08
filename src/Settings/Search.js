@@ -5,8 +5,6 @@ import { AppContext } from '../App/AppProvider';
 import _ from 'lodash';
 import fuzzy from 'fuzzy';
 
-// Search Bar Component for Searching Coins Using Cryptocompare found in Settings Component
-
 // CSS Styling for Search results grid
 const SearchGrid = styled.div`
   display: flex;

@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { AppContext } from '../App/AppProvider';
 import PriceTile from './PriceTile';
 
-//PriceGrid Component - Grid for Coins in user coin list not featured in the coin spotlight (at the top row of the Dashboard component)
-
 // CSS styling for Price Grid
 const PriceGrid =  styled.div`
   display: grid;
@@ -17,6 +15,7 @@ const PriceGrid =  styled.div`
   }
 `
 
+//PriceGrid Component - Grid for Coins in user coin list not featured in the coin spotlight (at the top row of the Dashboard component)
 export default function() {
   return (
     <AppContext.Consumer>

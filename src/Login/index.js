@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../App/AppProvider';
 import AuthApiService from '../services/auth-api-service';
-
 import Page from '../Shared/Page';
 import './Login.css';
 import ErrorImage from '../Register/error.svg';

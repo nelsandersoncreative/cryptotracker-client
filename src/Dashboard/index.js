@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import styled from 'styled-components';
 import { AppContext } from '../App/AppProvider';
 import Page from '../Shared/Page';
@@ -10,7 +9,7 @@ import PriceChart from './PriceChart';
 
 import '../App/App.css';
 
-// User Dashboard Component (when clicking on 'Dashboard')
+
 
 // CSS styling for ChartGrid on User Dashboard
 // left column: CoinSpotlight
@@ -30,6 +29,7 @@ const ChartGrid = styled.div`
   }
 `
 
+// User Dashboard Component (when clicking on 'Dashboard')
 export default function() {
   const { coins } = useContext(AppContext);
   if (coins.length === 0) {

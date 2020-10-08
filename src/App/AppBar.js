@@ -7,7 +7,7 @@ import './AppBar.css';
 
 // Navbar header component (AppBar)
 
-//styles using 'styled-components'
+//logo styling
 const Logo = styled.div`
   display: flex;
   flex-direction: row;
@@ -16,6 +16,7 @@ const Logo = styled.div`
   font-size: 1.5em;
 `
 
+//navbar container styling
 const Bar = styled.div`
   display: flex;
   justify-content: space-between;
@@ -29,6 +30,7 @@ const Bar = styled.div`
   }
 `
 
+// navbar button styling
 const ControlButtonElem = styled.div`
   cursor: pointer;
   box-shadow: 0px 0px 4px 2px black;

@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { DeletableTile } from '../Shared/Tile';
 
-// Component handling header for each Coin Tile
-
 //CSS Styling for Coin Header Grid
 export const CoinHeaderGridStyled = styled.div`
   display: grid;
@@ -25,6 +23,7 @@ const DeleteIcon = styled.div`
   }
 `
 
+// Component handling header for each Coin Tile
 export default function({name, symbol, topSection}) {
   return <CoinHeaderGridStyled>
     <div> {name} </div>

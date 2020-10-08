@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-
 import TokenService from '../services/TokenService';
 import AuthApiService from '../services/auth-api-service';
-
 import config from '../config';
-
 import _ from 'lodash';
 import moment from 'moment';
-
 const cc = require('cryptocompare');
 
 

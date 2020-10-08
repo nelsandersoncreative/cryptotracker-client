@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import {AppContext} from '../App/AppProvider';
 import { fontSize1, greenBoxShadow, color3 } from '../Shared/Styles';
 
-// Confirm Favorites Button component found in settings component
-
 // CSS Styling for confirm button
 const ConfirmButtonStyled = styled.div`
   margin: 20px;

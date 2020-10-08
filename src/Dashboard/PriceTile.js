@@ -5,8 +5,6 @@ import { fontSize3, fontSizeBig, greenBoxShadow } from '../Shared/Styles';
 import { CoinHeaderGridStyled } from '../Settings/CoinHeaderGrid';
 import { AppContext } from '../App/AppProvider';
 
-// Component for coin tiles in user dashboard
-
 //css styling for justification of text on different coin tiles
 const JustifyRight = styled.div`
   text-align: right;
@@ -87,6 +85,7 @@ function PriceTileCompact({ sym, data, currentFavorite, setCurrentFavorite }) {
   )
 }
 
+// Component for coin tiles in user dashboard
 export default function ({price, index}) {
   let sym = Object.keys(price)[0];
   let data = price[sym]['USD'];
