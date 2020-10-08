@@ -6,7 +6,7 @@ export default styled.div`
   @media(max-width: 780px) {
     padding: 10px 10px 10px 10px;
   }
-  @media (max-width: 700px) {
-    width: 770px;
+  @media (max-width: 500px) {
+    width: 310px;
   }
 `
