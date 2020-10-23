@@ -81,7 +81,7 @@ h3.welcome-desc {
     font-size: 12px;
   }
 
-  .welcome-list {
+  .welcome-list > li {
     font-size: 12px;
   }
 
