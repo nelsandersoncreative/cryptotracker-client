@@ -19,12 +19,18 @@ h1.welcome-desc {
   margin: 10px 10px;
   border: 1px solid var(--success-color);
   list-style: none;
-
 }
 
 .welcome-list > li {
   margin: 10px 10px;
   text-align: left;
+}
+
+.welcome-login-creds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome-steps {
