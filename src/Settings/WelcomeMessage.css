@@ -69,12 +69,12 @@ h3.welcome-desc {
     text-align: center;
     font-size: 19px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   h3.welcome-desc {
     font-size: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   p.welcome-steps {
