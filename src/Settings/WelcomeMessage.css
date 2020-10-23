@@ -4,6 +4,10 @@ h1.welcome-head {
   margin-bottom: 20px;
 }
 
+h1.welcome-desc {
+  margin: 10px 0;
+}
+
 .welcome-greeting {
   font-size: 30px;
   text-align: center;
@@ -19,7 +23,7 @@ h1.welcome-head {
 }
 
 .welcome-list > li {
-  margin: 10px 0;
+  margin: 10px 10px;
   text-align: left;
 }
 
