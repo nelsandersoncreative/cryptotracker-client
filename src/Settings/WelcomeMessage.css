@@ -81,6 +81,10 @@ h3.welcome-desc {
     font-size: 12px;
   }
 
+  .welcome-list {
+    font-size: 12px;
+  }
+
   .label-grid {
     grid-template-columns: auto 220px auto;
   }
