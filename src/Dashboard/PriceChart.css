@@ -52,7 +52,7 @@ background-color: black;
 font-size: 100px;
 }
 
-.spinner {
+.price-spinner {
   font-size: 20px;
   display: flex;
   flex-direction: row;

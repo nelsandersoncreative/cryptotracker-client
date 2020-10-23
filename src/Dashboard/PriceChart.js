@@ -30,7 +30,7 @@ export default function() {
         </ChartSelect>
       </div>
         {historical ? <ReactHighCharts config={highchartsConfig(historical)}/> 
-        : <div className="spinner"><Spinner name="pacman" color="var(--success-color)"/><div className="middle-spinner"></div>Loading Cryptocurrency Historical Data</div>}    
+        : <div className="price-spinner"><Spinner name="pacman" color="var(--success-color)"/><div className="middle-spinner"></div>Loading Cryptocurrency Historical Data</div>}    
       </div>
     }
     </AppContext.Consumer>
