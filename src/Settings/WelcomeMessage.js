@@ -7,12 +7,12 @@ export default function({firstVisit}) {
   return (
     <AppContext.Consumer>
       {({firstVisit, hasAuth, currentUser, favorites, coins }) =>
-        firstVisit && !hasAuth ? <div>
+        firstVisit && !hasAuth ? <div className="welcome-container">
         <h1 className="welcome-head">Welcome to CryptoTracker</h1>
         <h3 className="welcome-desc">This app allows you to track chronological price data for your favorite cryptocurrencies!</h3>
         <p className="welcome-steps">
         <ul className="welcome-list">
-          <li>Sample account to view the onboarding experience</li>
+          <li>Sample Login Credentials to view the onboarding experience:</li>
           <li>USERNAME: sampleuser@sampleuser.com</li>
           <li>PASSWORD: foobar</li>
         </ul>
