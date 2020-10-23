@@ -12,7 +12,7 @@ export default function({firstVisit}) {
         <h3 className="welcome-desc">This app allows you to track chronological price data for your favorite cryptocurrencies!</h3>
         <div className="welcome-steps welcome-login-creds">
           <ul className="welcome-list">
-            <li>Sample Login Credentials to view the onboarding experience:</li>
+            <li>Sample Login Credentials:</li>
             <li>USERNAME: sampleuser@sampleuser.com</li>
             <li>PASSWORD: foobar</li>
           </ul>

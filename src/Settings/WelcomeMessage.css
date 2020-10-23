@@ -22,6 +22,12 @@ h3.welcome-desc {
   list-style: none;
 }
 
+.welcome-list > li:first-child {
+  text-align: center;
+  margin: 10px 0 20px 0;
+  text-transform: uppercase;
+}
+
 .welcome-list > li {
   margin: 10px 10px;
   text-align: left;
@@ -84,6 +90,11 @@ h3.welcome-desc {
 
   .welcome-list > li {
     font-size: 10px;
+  }
+
+  .login-creds {
+    margin: 15px 0;
+    border-bottom: 1px solid var(--success-color);
   }
 
   .label-grid {
