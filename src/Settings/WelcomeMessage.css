@@ -66,13 +66,14 @@ h3.welcome-desc {
 
 @media (max-width: 780px) {
   h1.welcome-head {
-    text-align: left;
+    text-align: center;
     font-size: 19px;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
 
   h3.welcome-desc {
+    text-align: left;
     font-size: 12px;
     margin: 10px 0 0 0;
   }
