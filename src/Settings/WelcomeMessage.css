@@ -58,12 +58,12 @@ h1.welcome-head {
     text-align: center;
     font-size: 19px;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   h3.welcome-desc {
     font-size: 12px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
 
   p.welcome-steps {
