@@ -2,6 +2,10 @@
   font-size: 30px;
 }
 
+.welcome-list {
+  border: 1px solid var(--success-color);
+}
+
 .label-grid {
   display: grid;
   grid-template-columns: auto 350px auto;
