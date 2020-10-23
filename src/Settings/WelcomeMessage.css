@@ -11,8 +11,8 @@ h1.welcome-head {
 
 .welcome-list {
   display: inline-block;
-  padding: 20px;
-  margin: 30px 0;
+  padding: 10px;
+  margin: 10px 0;
   border: 1px solid var(--success-color);
   list-style: none;
 
