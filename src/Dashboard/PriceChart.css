@@ -62,6 +62,7 @@ font-size: 100px;
 
 .middle-spinner {
   width: 30px;
+  margin: 20px 0;
 }
 
 @media (max-width: 780px) {
