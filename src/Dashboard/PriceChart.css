@@ -53,7 +53,7 @@ font-size: 100px;
 }
 
 .spinner {
-  font-size: 30px;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -61,7 +61,7 @@ font-size: 100px;
 }
 
 .middle-spinner {
-  width: 50px;
+  width: 30px;
 }
 
 @media (max-width: 780px) {
